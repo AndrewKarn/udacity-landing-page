@@ -32,7 +32,7 @@ function getContainerIds(htmlObject, list = []) {
   }
   return list;
 }
-
+// Main function, constructs the nav, injects the button html and adds the event listeners
 function constructAnchorLinks(containerIds) {
   let idx = 0;
   for (id of containerIds) {
@@ -60,7 +60,7 @@ function isInViewport(element) {
     rect.right <= (window.innerWidth || html.clientWidth)
   );
 }
-// listen for all scrolls and call the isInViewport method.
+// listen for all scrolls and call the isInViewport method on all of them.
 function addListenersToContainers(containerIds) {
   for (container of containerIds) {
     let section = document.getElementById(container);
